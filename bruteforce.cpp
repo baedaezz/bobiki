@@ -27,7 +27,7 @@ int reverse(int num)
 		len -= 1;
 	}
 	return sum;
-
+}
 bool palindrome(int num)
 {
 	if (num == reverse(num))
