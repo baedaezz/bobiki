@@ -13,6 +13,21 @@ int counter(int num)
 	return len;
 }
 
+
+int reverse(int num)
+{
+	int sum, len = counter(num) - 1;
+	float b;
+	while (len >= 0)
+	{
+		b = pow(10.0, len);
+		sum += (num % 10) * b;
+		num = num - (num % 10);
+		num /= 10;
+		len -= 1;
+	}
+	return sum;
+
 bool palindrome(int num)
 {
 	if (num == reverse(num))
